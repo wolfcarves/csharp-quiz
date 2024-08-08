@@ -1,8 +1,8 @@
-# Coding Activity: Error Handling in C#
+# Coding Activity: Error Handling and Unit Testing in C#
 
 ## Objective
 
-To practice implementing error handling in C#.
+To practice implementing error handling and unit testing in C#.
 
 ## Activity Description
 
@@ -14,32 +14,7 @@ The following operations should be supported:
 - multiplication
 - division
 
-**Sample Code**
-
-```csharp
-namespace CalculatorApp;
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Enter the first number:");
-        double num1 = Convert.ToDouble(Console.ReadLine());
-
-        Console.WriteLine("Enter the second number:");
-        double num2 = Convert.ToDouble(Console.ReadLine());
-
-        Console.WriteLine("Enter the operation (add, subtract, multiply, divide):");
-        string operation = Console.ReadLine()?.ToLower() ?? string.Empty;
-
-        var calculator = new Calculator();    
-        double result = calculator.PerformOperation(num1, num2, operation);
-        Console.WriteLine($"The result is: {result}");
-
-        Console.WriteLine("Calculation attempt finished.");
-    }
-}
-```
+**Exception Handling**
 
 Update the sample code to handle the following scenarios using exception handling:
 
@@ -90,3 +65,7 @@ modulo
 An error occurred: The specified operation is not supported.
 Calculation attempt finished.
 ```
+
+**Unit Testing**
+
+Create unit tests for the calculator class to verify that the calculations are correct and that exceptions are handled properly.
